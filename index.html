@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaique Ferreira (Marzino) | Desenvolvedor Full Stack & UI/UX Designer</title>
+  <meta name="description" content="Portfólio de Kaique Ferreira (Marzino). Desenvolvedor de sites, aplicativos, e-commerces, sistemas sob medida e UI/UX designer.">
+  <meta name="keywords" content="Kaique Ferreira, Marzino, Desenvolvedor Web, Full Stack, React, Next.js, UI/UX, São Paulo, Portfólio">
+  <meta name="author" content="Kaique Ferreira">
+  
+  <!-- Open Graph / Meta Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kaique Ferreira (Marzino) | Portfólio">
+  <meta property="og:description" content="Desenvolvo sites, aplicativos, lojas virtuais e sistemas sob medida. Da primeira ideia ao produto final.">
+  <meta property="og:image" content="assets/full_page_figma_preview.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="shortcut icon" href="assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+
+  <!-- Google Fonts: Righteous, Road Rage, Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Road+Rage&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="cyber-theme">
+
+  <!-- Ambient Glow Effects and Scanline -->
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <!-- HEADER / TOP NAVIGATION -->
+  <header class="site-header" id="navbar">
+    <div class="header-container">
+      <a href="#hero" class="brand-logo">
+        <span class="logo-accent">MARZINO</span><span class="logo-sub">.GG</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#hero" class="nav-link active">Início</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#servicos" class="nav-link">Serviços</a>
+        <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#projetos" class="nav-link">Projetos</a>
+        <a href="#contato" class="nav-link">Contato</a>
+      </nav>
+
+      <!-- Social Media Links (as in Figma) -->
+      <div class="social-header">
+        <a href="https://github.com/kaiquemix" target="_blank" rel="noopener noreferrer" class="social-btn github" title="GitHub" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.behance.net/kaiquemix" target="_blank" rel="noopener noreferrer" class="social-btn behance" title="Behance" aria-label="Behance">
+          <i class="fa-brands fa-behance"></i>
+        </a>
+        <a href="https://www.instagram.com/kaiquerbn/" target="_blank" rel="noopener noreferrer" class="social-btn instagram" title="Instagram" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/kaiquemix/" target="_blank" rel="noopener noreferrer" class="social-btn linkedin" title="LinkedIn" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://wa.me/5527997330865" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp" title="WhatsApp" aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECTION 1: HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-layer" id="heroBg" style="background-image: url('assets/bg-hero.png');"></div>
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-content">
+        <div class="hero-text-box" data-aos="fade-right">
+          <div class="hero-badge">
+            <span class="status-dot"></span> Disponível para novos projetos
+          </div>
+          
+          <h1 class="hero-title">
+            Olá, que bom te ver aqui! <br>
+            <span class="highlight-cyan">Chega mais, bora tomar um café....</span>
+          </h1>
+
+          <p class="hero-description">
+            Desenvolvo <strong>sites</strong>, <strong>aplicativos</strong>, <strong>lojas virtuais</strong> e <strong>sistemas sob medida</strong>. Da primeira ideia ao <strong>marketing digital</strong>, vamos construir o seu produto de forma simples e sem complicação.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projetos" class="btn btn-secondary btn-icon" id="btnProjects">
+              <span class="icon-circle"><i class="fa-solid fa-chevron-down"></i></span>
+              <span>Dar uma olhada nos projetos</span>
+            </a>
+
+            <a href="https://wa.me/5527997330865?text=Ol%C3%A1%20Kaique,%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar!" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-icon btn-glow" id="btnWhatsapp">
+              <span class="icon-circle"><i class="fa-brands fa-whatsapp"></i></span>
+              <span>Bora trocar uma ideia?</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll-indicator">
+        <a href="#skills" aria-label="Rolar para baixo">
+          <div class="mouse">
+            <div class="wheel"></div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- SECTION 2: SKILLS SECTION -->
+    <section class="skills-section" id="skills">
+      <div class="container">
+        
+        <div class="skills-header" data-aos="fade-up">
+          <h2 class="skills-main-tagline">
+            Aqui você vai encontrar um pouco <br>
+            do meu trabalho e minhas experiências!
+          </h2>
+        </div>
+
+        <div class="skills-showcase-grid">
+          
+          <!-- Character & Pedestal 3D Element Stage -->
+          <div class="character-wrapper" data-aos="zoom-in">
+            <div class="skills-visual-stage">
+              <img src="assets/arch-skills-clean.png" alt="Portal Neon" class="stage-arch">
+              <img src="assets/pedestal-blue-clean.png" alt="Pedestal Neon 3D" class="stage-pedestal">
+              <img src="assets/character-pixel-clean.png" alt="Avatar Kaique 3D Pixel" class="stage-character float-centered">
+            </div>
+          </div>
+
+          <!-- Skills List with Glowing Cyber Bullets (Exact from Figma) -->
+          <div class="skills-list-container" data-aos="fade-left">
+            <div class="skills-title-wrapper">
+              <h3 class="skills-main-title">
+                <span class="title-my">My</span> <span class="title-skills">SKILLS</span>
+              </h3>
+              <div class="skills-white-line"></div>
+            </div>
+
+            <div class="skills-dual-columns">
+              <!-- Column 1: Tech & Dev -->
+              <ul class="skills-column">
+                <li class="skill-item">
+                  <span class="skill-bullet dot-cyan"></span>
+                  <span class="skill-name">REACT</span>
+                </li>
+                <li class="skill-item">
+                  <span class="skill-bullet dot-white-ring"></span>
+                  <span class="skill-name">NEXT</span>
+                </li>
+                <li class="skill-item">
+                  <span class="skill-bullet dot-green"></span>
+                  <span class="skill-name">NODE</span>
+                </li>
+                <li class="skill-item">
+                  <span class="skill-bullet dot-red"></span>
+                  <span class="skill-name">ANGULAR</span>
+                </li>
+                <li class="skill-item">
+                  <span class="skill-bullet dot-magenta"></span>
+                  <span class="skill-name">N8N</span>
+                </li>
+                <li class="skill-item">
+                  <span class="skill-bullet dot-salmon"></span>
+                  <span class="skill-name">OPENCLAW</span>
+                </li>
+              </ul>
+
+              <!-- Column 2: Design & Marketing -->
+              <ul class="skills-column">
+                <li class="skill-item">
+                  <span class="skill-bullet dot-magenta"></span>
+                  <span class="skill-name">FIGMA</span>
+                </li>
+                <li class="skill-item">
+                  <span class="skill-bullet dot-blue"></span>
+                  <span class="skill-name">PHOTOSHOP</span>
+                </li>
+                <li class="skill-item">
+                  <span class="skill-bullet dot-cyan"></span>
+                  <span class="skill-name">PHP</span>
+                </li>
+                <li class="skill-item">
+                  <span class="skill-bullet dot-cyan-light"></span>
+                  <span class="skill-name">WORDPRESS</span>
+                </li>
+                <li class="skill-item">
+                  <span class="skill-bullet dot-sky"></span>
+                  <span class="skill-name">META ADS</span>
+                </li>
+                <li class="skill-item">
+                  <span class="skill-bullet dot-olive"></span>
+                  <span class="skill-name">GOOGLE ADS</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: SERVICES SECTION -->
+    <section class="services-section" id="servicos">
+      <div class="services-bg-layer" style="background-image: url('assets/bg-services.png');"></div>
+      <div class="services-overlay"></div>
+
+      <div class="container services-container">
+        
+        <div class="section-title-center" data-aos="fade-up">
+          <h2 class="title-roadrage">SERVIÇOS</h2>
+          <p class="subtitle-roboto">Conheça um pouco do tipo de serviços que eu faço!</p>
+        </div>
+
+        <!-- 9 Services Grid (From Figma) -->
+        <div class="services-grid">
+          
+          <!-- 1. Sites -->
+          <div class="service-card glass-cyber" data-aos="fade-up" data-aos-delay="50">
+            <div class="card-glow-border"></div>
+            <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+            <h3 class="service-title">Sites</h3>
+            <p class="service-desc">Websites institucionais de alta performance, rápidos, responsivos e otimizados para mecanismos de busca (SEO).</p>
+            <div class="service-footer">
+              <span class="tag">HTML / CSS / JS</span>
+              <span class="tag">React / Next / Angular ww</span>
+            </div>
+          </div>
+
+          <!-- 2. Mobile App -->
+          <div class="service-card glass-cyber" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-glow-border"></div>
+            <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+            <h3 class="service-title">Mobile App</h3>
+            <p class="service-desc">Aplicativos móveis nativos e híbridos para iOS e Android com interfaces fluidas e alta usabilidade.</p>
+            <div class="service-footer">
+              <span class="tag">React Native</span>
+              <span class="tag">Mobile UX</span>
+            </div>
+          </div>
+
+          <!-- 3. Landing Pages -->
+          <div class="service-card glass-cyber" data-aos="fade-up" data-aos-delay="150">
+            <div class="card-glow-border"></div>
+            <div class="service-icon"><i class="fa-solid fa-rocket"></i></div>
+            <h3 class="service-title">Landing Pages</h3>
+            <p class="service-desc">Páginas de vendas focadas em alta conversão de leads e clientes, com copywriting e design estratégico.</p>
+            <div class="service-footer">
+              <span class="tag">Alta Conversão</span>
+              <span class="tag">Copy & CRO</span>
+            </div>
+          </div>
+
+          <!-- 4. UI / UX Design -->
+          <div class="service-card glass-cyber" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-glow-border"></div>
+            <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+            <h3 class="service-title">Ui / Ux Design</h3>
+            <p class="service-desc">Design de interfaces intuitivas, protótipos interativos e design systems completos no Figma.</p>
+            <div class="service-footer">
+              <span class="tag">Figma</span>
+              <span class="tag">Design System</span>
+            </div>
+          </div>
+
+          <!-- 5. Ecommerce -->
+          <div class="service-card glass-cyber" data-aos="fade-up" data-aos-delay="250">
+            <div class="card-glow-border"></div>
+            <div class="service-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+            <h3 class="service-title">Ecommerce</h3>
+            <p class="service-desc">Lojas virtuais completas com integração de pagamentos, fretes e painel de gestão simples e intuitivo.</p>
+            <div class="service-footer">
+              <span class="tag">WooCommerce</span>
+              <span class="tag">Shopify</span>
+              <span class="tag">Nuvemshop</span>
+            </div>
+          </div>
+
+          <!-- 6. Identidade Visual -->
+          <div class="service-card glass-cyber" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-glow-border"></div>
+            <div class="service-icon"><i class="fa-solid fa-palette"></i></div>
+            <h3 class="service-title">Identidade Visual</h3>
+            <p class="service-desc">Criação de marcas memoráveis, logotipos, paleta de cores, tipografia e guia visual para empresas.</p>
+            <div class="service-footer">
+              <span class="tag">Branding</span>
+              <span class="tag">Photoshop / AI</span>
+            </div>
+          </div>
+
+          <!-- 7. Marketing Digital -->
+          <div class="service-card glass-cyber" data-aos="fade-up" data-aos-delay="350">
+            <div class="card-glow-border"></div>
+            <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <h3 class="service-title">Marketing digital</h3>
+            <p class="service-desc">Gestão de tráfego pago estratégico no Meta Ads e Google Ads para escalar suas vendas e leads diários.</p>
+            <div class="service-footer">
+              <span class="tag">Meta Ads</span>
+              <span class="tag">Google Ads</span>
+            </div>
+          </div>
+
+          <!-- 8. AI Agent -->
+          <div class="service-card glass-cyber" data-aos="fade-up" data-aos-delay="400">
+            <div class="card-glow-border"></div>
+            <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
+            <h3 class="service-title">AI Agent</h3>
+            <p class="service-desc">Agentes autônomos de inteligência artificial, automações avançadas com N8N e integrações com LLMs.</p>
+            <div class="service-footer">
+              <span class="tag">N8N / Webhooks</span>
+              <span class="tag">OpenAI / Claude</span>
+            </div>
+          </div>
+
+          <!-- 9. SaaS -->
+          <div class="service-card glass-cyber" data-aos="fade-up" data-aos-delay="450">
+            <div class="card-glow-border"></div>
+            <div class="service-icon"><i class="fa-solid fa-cloud-bolt"></i></div>
+            <h3 class="service-title">SaaS</h3>
+            <p class="service-desc">Software como serviço sob medida: arquitetura escalável, autenticação segura e cobrança recorrente.</p>
+            <div class="service-footer">
+              <span class="tag">Full Stack</span>
+              <span class="tag">Stripe / Assinaturas</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Section CTA Button (Exact from Figma) -->
+        <div class="section-center-btn" data-aos="zoom-in">
+          <button class="btn-figma-quote open-budget-modal" id="btnServiceBudget">
+            <span class="btn-dot"></span>
+            <span>FAÇA UM ORÇAMENTO</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: ABOUT ME (ABOUT - MARZINO) -->
+    <section class="about-section" id="sobre">
+      <div class="container">
+        <div class="about-grid">
+          
+          <!-- Text and Bio Content (Exact from Figma) -->
+          <div class="about-content" data-aos="fade-right">
+            <span class="about-tag">About – Marzino</span>
+            <h2 class="about-title">Kaique Ferreira</h2>
+
+            <div class="about-bio">
+              <p>
+                Especializado na criação de interfaces modernas, acessíveis e responsivas para aplicações web e mobile. Possuo forte conhecimento em desenvolvimento orientado à performance e experiência do usuário, sempre buscando otimizar código e garantir escalabilidade.
+              </p>
+              <p>
+                Além das habilidades técnicas, me destaco pela resiliência, comunicação assertiva, ética de trabalho e flexibilidade, características que me permitem atuar de forma colaborativa e eficiente em diferentes equipes e projetos.
+              </p>
+              <p>
+                Estou em constante aprendizado e aberto a novas oportunidades para contribuir com equipes inovadoras e desafios tecnológicos.
+              </p>
+            </div>
+
+            <div class="about-action">
+              <button class="btn-figma-quote open-budget-modal" id="btnAboutBudget">
+                <span class="btn-dot"></span>
+                <span>FAÇA UM ORÇAMENTO</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Stylized Visual Composite: Kaique photo + 3D podium + Joystick + Checklist -->
+          <div class="about-visual" data-aos="fade-left">
+            <div class="about-avatar-container">
+              <img src="assets/about-avatar-composite.png" alt="Kaique Ferreira - Foto e Elementos 3D" class="about-composite-img float-standard">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: PROJECTS SHOWCASE (ÚLTIMOS PROJETOS) -->
+    <section class="projects-section" id="projetos">
+      <div class="projects-bg-layer" style="background-image: url('assets/bg-projects.png');"></div>
+      <div class="projects-overlay"></div>
+
+      <div class="container projects-container">
+        
+        <div class="section-title-center" data-aos="fade-up">
+          <h2 class="title-roadrage">Últimos Projetos</h2>
+          <p class="subtitle-roboto">Trabalhos recentes desenvolvidos com excelência técnica e foco em resultados.</p>
+        </div>
+
+        <!-- Filter tabs for projects -->
+        <div class="project-filters" data-aos="fade-up">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="web">Web & Apps</button>
+          <button class="filter-btn" data-filter="landing">Landing Pages</button>
+          <button class="filter-btn" data-filter="ui">UI/UX & Design</button>
+        </div>
+
+        <!-- Projects Grid Showcase -->
+        <div class="projects-grid" id="projectsGrid">
+          
+          <!-- Project 1: 8BitDo Ultimate Controller Interactive Experience -->
+          <article class="project-card glass-cyber" data-category="web ui" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-img-wrapper">
+              <img src="assets/project-1.png" alt="8BitDo Ultimate 2 Wireless Controller Showcase" loading="lazy">
+              <div class="project-img-overlay">
+                <div class="project-quick-links">
+                  <button class="quick-btn view-details-btn" data-project="1" title="Ver Detalhes"><i class="fa-solid fa-eye"></i></button>
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="quick-btn" title="Código Fonte"><i class="fa-brands fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-category">Landing Page / Hardware Showcase</span>
+              <h3 class="project-name">8BitDo Ultimate 2 - Wuchang Edition</h3>
+              <p class="project-summary">Página de produto com visualização 3D, microinterações e alta imersão gamer para periféricos premium.</p>
+              <div class="project-tags">
+                <span>React</span>
+                <span>Tailwind</span>
+                <span>Framer Motion</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Honkai Star Rail Special Edition -->
+          <article class="project-card glass-cyber" data-category="web landing" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-img-wrapper">
+              <img src="assets/project-2.png" alt="8BitDo Honkai Star Rail Evernight Edition" loading="lazy">
+              <div class="project-img-overlay">
+                <div class="project-quick-links">
+                  <button class="quick-btn view-details-btn" data-project="2" title="Ver Detalhes"><i class="fa-solid fa-eye"></i></button>
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="quick-btn" title="Código Fonte"><i class="fa-brands fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-category">E-commerce / Edição Especial</span>
+              <h3 class="project-name">Evernight Edition - Honkai Showcase</h3>
+              <p class="project-summary">Layout responsivo, integração de checkout express e experiência visual temática de anime/cyberpunk.</p>
+              <div class="project-tags">
+                <span>Next.js</span>
+                <span>TypeScript</span>
+                <span>UI/UX</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Cyberpunk Interactive Platform -->
+          <article class="project-card glass-cyber" data-category="web ui" data-aos="fade-up" data-aos-delay="300">
+            <div class="project-img-wrapper">
+              <img src="assets/project-3.png" alt="Cyber Arcade Platform" loading="lazy">
+              <div class="project-img-overlay">
+                <div class="project-quick-links">
+                  <button class="quick-btn view-details-btn" data-project="3" title="Ver Detalhes"><i class="fa-solid fa-eye"></i></button>
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="quick-btn" title="Código Fonte"><i class="fa-brands fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-category">Full Stack Web App</span>
+              <h3 class="project-name">Neo-Arcade Cybercafe Portal</h3>
+              <p class="project-summary">Sistema web de reservas e dashboard interativo para comunidade gamer com sistema de membros e recompensas.</p>
+              <div class="project-tags">
+                <span>Node.js</span>
+                <span>PostgreSQL</span>
+                <span>React</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Carousel Pagination Dots (From Figma) -->
+        <div class="carousel-dots-wrapper">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 6: CONTACT & CTA (AGENDE UM PAPO COMIGO) -->
+    <section class="contact-section" id="contato">
+      <div class="container contact-container">
+        
+        <div class="contact-card glass-cyber" data-aos="zoom-in">
+          
+          <h2 class="contact-main-heading">
+            Agende um Papo Comigo Agora Mesmo !
+          </h2>
+
+          <p class="contact-subtext">
+            Tem uma ideia de projeto ou precisa evoluir seu negócio no digital? Vamos conversar sobre suas metas e transformar sua visão em realidade tecnológica.
+          </p>
+
+          <div class="contact-cta-wrapper">
+            <button class="btn-figma-quote open-budget-modal pulse-animation" id="btnFooterBudget">
+              <span class="btn-dot"></span>
+              <span>FAÇA UM ORÇAMENTO</span>
+            </button>
+          </div>
+
+          <!-- Social Indicators / Contact Badges -->
+          <div class="contact-social-pills">
+            <a href="https://wa.me/5527997330865" target="_blank" rel="noopener noreferrer" class="pill-link whatsapp">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp Direto
+            </a>
+            <a href="mailto:kaiquerbn@gmail.com" class="pill-link email">
+              <i class="fa-solid fa-envelope"></i> kaiquerbn@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/kaiquemix/" target="_blank" rel="noopener noreferrer" class="pill-link linkedin">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://www.behance.net/kaiquemix" target="_blank" rel="noopener noreferrer" class="pill-link behance">
+              <i class="fa-brands fa-behance"></i> Behance
+            </a>
+            <a href="https://github.com/kaiquemix" target="_blank" rel="noopener noreferrer" class="pill-link github">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
+
+          <!-- Bottom Ellipse Dots (From Figma) -->
+          <div class="footer-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p class="copyright-text">
+        Marzino GG - Kaique Ferreira - Todos os Direitos Reservados @2026
+      </p>
+      <div class="footer-back-to-top">
+        <a href="#hero" aria-label="Voltar ao topo"><i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL: FAÇA UM ORÇAMENTO -->
+  <div class="budget-modal-backdrop" id="budgetModal">
+    <div class="budget-modal-card glass-cyber">
+      <button class="modal-close-btn" id="closeModalBtn" aria-label="Fechar modal">&times;</button>
+      
+      <div class="modal-header">
+        <span class="modal-badge">Orçamento Rápido</span>
+        <h3 class="modal-title">Vamos dar vida ao seu projeto!</h3>
+        <p class="modal-subtitle">Preencha os dados abaixo e entrarei em contato em até 24 horas.</p>
+      </div>
+
+      <form id="budgetForm" class="budget-form">
+        <div class="form-group">
+          <label for="clientName">Seu Nome / Empresa *</label>
+          <input type="text" id="clientName" name="name" placeholder="Ex: João Silva ou Minha Empresa" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="clientWhatsapp">WhatsApp *</label>
+            <input type="tel" id="clientWhatsapp" name="whatsapp" placeholder="(11) 99999-9999" required>
+          </div>
+          <div class="form-group">
+            <label for="clientEmail">E-mail *</label>
+            <input type="email" id="clientEmail" name="email" placeholder="seuemail@exemplo.com" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="serviceType">Tipo de Serviço Principal *</label>
+          <select id="serviceType" name="service" required>
+            <option value="" disabled selected>Selecione um serviço</option>
+            <option value="Criação de Site Institucional">Criação de Site Institucional</option>
+            <option value="Landing Page de Alta Conversão">Landing Page de Alta Conversão</option>
+            <option value="Aplicativo Mobile (iOS / Android)">Aplicativo Mobile (iOS / Android)</option>
+            <option value="Loja Virtual / E-commerce">Loja Virtual / E-commerce</option>
+            <option value="UI / UX Design & Protótipo">UI / UX Design & Protótipo</option>
+            <option value="Identidade Visual & Branding">Identidade Visual & Branding</option>
+            <option value="Gestão de Tráfego / Marketing">Gestão de Tráfego / Marketing</option>
+            <option value="Agente AI / Automação N8N">Agente AI / Automação N8N</option>
+            <option value="SaaS / Sistema Customizado">SaaS / Sistema Customizado</option>
+            <option value="Outro / Consultoria">Outro / Consultoria</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="projectDetails">Conte mais sobre a sua ideia / projeto</label>
+          <textarea id="projectDetails" name="details" rows="3" placeholder="Fale brevemente sobre seus objetivos, prazos ou referências..."></textarea>
+        </div>
+
+        <div class="modal-actions">
+          <button type="submit" class="btn-submit-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i> Enviar Mensagem via WhatsApp
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: PROJECT DETAILS -->
+  <div class="project-modal-backdrop" id="projectModal">
+    <div class="project-modal-card glass-cyber">
+      <button class="modal-close-btn" id="closeProjectModalBtn" aria-label="Fechar">&times;</button>
+      <div class="project-modal-body" id="projectModalBody">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
