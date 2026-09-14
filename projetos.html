@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projetos | Kaique Ferreira (Marzino) - Portfólio</title>
+  <meta name="description" content="Confira os últimos projetos desenvolvidos por Kaique Ferreira (Marzino). Sites, aplicativos, e-commerces, sistemas e UI/UX design.">
+  <meta name="keywords" content="Kaique Ferreira, Marzino, Projetos, Full Stack, React, Next.js, UI/UX, Portfólio">
+  <meta name="author" content="Kaique Ferreira">
+  
+  <!-- Open Graph / Meta Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Projetos | Kaique Ferreira (Marzino)">
+  <meta property="og:description" content="Trabalhos recentes desenvolvidos com excelência técnica e foco em resultados.">
+  <meta property="og:image" content="assets/favicon.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="shortcut icon" href="assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+
+  <!-- Google Fonts: Righteous, Road Rage, Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Road+Rage&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="cyber-theme">
+
+  <!-- Ambient Glow Effects and Scanline -->
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <!-- HEADER / TOP NAVIGATION -->
+  <header class="site-header" id="navbar">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-accent">MARZINO</span><span class="logo-sub">.GG</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html#hero" class="nav-link">Início</a>
+        <a href="index.html#skills" class="nav-link">Skills</a>
+        <a href="index.html#servicos" class="nav-link">Serviços</a>
+        <a href="index.html#sobre" class="nav-link">Sobre</a>
+        <a href="projetos.html" class="nav-link active">Projetos</a>
+        <a href="index.html#contato" class="nav-link">Contato</a>
+      </nav>
+
+      <!-- Social Media Links -->
+      <div class="social-header">
+        <a href="https://github.com/kaiquemix" target="_blank" rel="noopener noreferrer" class="social-btn github" title="GitHub" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.behance.net/kaiquemix" target="_blank" rel="noopener noreferrer" class="social-btn behance" title="Behance" aria-label="Behance">
+          <i class="fa-brands fa-behance"></i>
+        </a>
+        <a href="https://www.instagram.com/kaiquerbn/" target="_blank" rel="noopener noreferrer" class="social-btn instagram" title="Instagram" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/kaiquemix/" target="_blank" rel="noopener noreferrer" class="social-btn linkedin" title="LinkedIn" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://wa.me/5527997330865" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp" title="WhatsApp" aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECTION: TODOS OS PROJETOS (GRADE COMPLETA) -->
+    <section class="projects-page-section" id="projetos">
+      <div class="projects-bg-layer" style="background-image: url('assets/bg-projects.avif');"></div>
+      <div class="projects-overlay"></div>
+
+      <div class="container projects-container">
+        
+        <div class="section-title-center" data-aos="fade-up">
+          <h1 class="title-roadrage">Últimos Projetos</h1>
+          <p class="subtitle-roboto">Trabalhos recentes desenvolvidos com excelência técnica e foco em resultados.</p>
+        </div>
+
+        <!-- Filter tabs for projects -->
+        <div class="project-filters" data-aos="fade-up">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="landing-sites">Landing Pages / Sites</button>
+          <button class="filter-btn" data-filter="saas-apps">SaaS & Apps</button>
+          <button class="filter-btn" data-filter="social-media">Social Media</button>
+          <button class="filter-btn" data-filter="loja-virtual">Loja Virtual / E-commerce</button>
+          <button class="filter-btn" data-filter="identidade-visual">Identidade Visual / Logos</button>
+          <button class="filter-btn" data-filter="design">Design</button>
+          <button class="filter-btn" data-filter="3d">3D</button>
+        </div>
+
+        <!-- Projects Grid Showcase (Full Grid dynamically populated from projects.json) -->
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Carregado dinamicamente via script.js a partir do projects.json -->
+        </div>
+        <div class="projects-load-more" id="projectsLoadMore" aria-live="polite">
+          <span id="projectsLoadStatus"></span>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p class="copyright-text">
+        Marzino GG - Kaique Ferreira - Todos os Direitos Reservados @2026
+      </p>
+      <div class="footer-back-to-top">
+        <a href="#navbar" aria-label="Voltar ao topo"><i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL: FAÇA UM ORÇAMENTO -->
+  <div class="budget-modal-backdrop" id="budgetModal">
+    <div class="budget-modal-card glass-cyber">
+      <button class="modal-close-btn" id="closeModalBtn" aria-label="Fechar modal">&times;</button>
+      
+      <div class="modal-header">
+        <span class="modal-badge">Orçamento Rápido</span>
+        <h3 class="modal-title">Vamos dar vida ao seu projeto!</h3>
+        <p class="modal-subtitle">Preencha os dados abaixo e entrarei em contato em até 24 horas.</p>
+      </div>
+
+      <form id="budgetForm" class="budget-form">
+        <div class="form-group">
+          <label for="clientName">Seu Nome / Empresa *</label>
+          <input type="text" id="clientName" name="name" placeholder="Ex: João Silva ou Minha Empresa" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="clientWhatsapp">WhatsApp *</label>
+            <input type="tel" id="clientWhatsapp" name="whatsapp" placeholder="(27) 99733-0865" required>
+          </div>
+          <div class="form-group">
+            <label for="clientEmail">E-mail *</label>
+            <input type="email" id="clientEmail" name="email" placeholder="seuemail@exemplo.com" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="serviceType">Tipo de Serviço Principal *</label>
+          <select id="serviceType" name="service" required>
+            <option value="" disabled selected>Selecione um serviço</option>
+            <option value="Criação de Site Institucional">Criação de Site Institucional</option>
+            <option value="Landing Page de Alta Conversão">Landing Page de Alta Conversão</option>
+            <option value="Aplicativo Mobile (iOS / Android)">Aplicativo Mobile (iOS / Android)</option>
+            <option value="Loja Virtual / E-commerce">Loja Virtual / E-commerce</option>
+            <option value="UI / UX Design & Protótipo">UI / UX Design & Protótipo</option>
+            <option value="Identidade Visual & Branding">Identidade Visual & Branding</option>
+            <option value="Gestão de Tráfego / Marketing">Gestão de Tráfego / Marketing</option>
+            <option value="Agente AI / Automações (N8N / Hermes / Openclaw)">Agente AI / Automações (N8N / Hermes / Openclaw)</option>
+            <option value="SAAS / Dashboards">SAAS / Dashboards</option>
+            <option value="Outro / Consultoria">Outro / Consultoria</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="projectDetails">Conte mais sobre a sua ideia / projeto</label>
+          <textarea id="projectDetails" name="details" rows="3" placeholder="Fale brevemente sobre seus objetivos, prazos ou referências..."></textarea>
+        </div>
+
+        <div class="modal-actions">
+          <button type="submit" class="btn-submit-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i> Enviar Mensagem via WhatsApp
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: PROJECT DETAILS -->
+  <div class="project-modal-backdrop" id="projectModal">
+    <div class="project-modal-card glass-cyber">
+      <button class="modal-close-btn" id="closeProjectModalBtn" aria-label="Fechar">&times;</button>
+      <div class="project-modal-body" id="projectModalBody">
+        <!-- Injetado dinamicamente via JavaScript a partir do projects.json -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/5527997330865?text=Ol%C3%A1%20Kaique,%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar!" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="floating-whatsapp-btn" 
+     aria-label="Conversar no WhatsApp"
+     title="Conversar no WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Bora trocar uma ideia?</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

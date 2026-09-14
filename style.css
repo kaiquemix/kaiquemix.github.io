@@ -367,6 +367,12 @@ img {
   font-size: 0.9rem;
 }
 
+/* Ícones dos CTAs do banner sem cápsula visual, para uma leitura mais limpa. */
+.hero-actions .hero-btn-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
 /* Glassmorphism Card Style */
 .glass-cyber {
   background: var(--bg-dark-card);
@@ -542,7 +548,7 @@ img {
 
 .skills-header {
   text-align: center;
-  margin-bottom: 3.5rem;
+  margin-bottom: 0;
 }
 
 .skills-main-tagline {
@@ -725,6 +731,7 @@ img {
 .dot-cyan-light { background: #13aad4; box-shadow: 0 0 12px #13aad4; }
 .dot-sky { background: #73e1ff; box-shadow: 0 0 12px #73e1ff; }
 .dot-olive { background: #81ad55; box-shadow: 0 0 12px #81ad55; }
+.dot-yellow { background: #ffd43b; box-shadow: 0 0 12px #ffd43b; }
 
 /* ==========================================================================
    SECTION 3: SERVIÇOS
@@ -779,7 +786,7 @@ img {
   color: #ffffff;
   text-shadow: 0 0 20px rgba(0, 255, 242, 0.5), 0 0 40px rgba(132, 70, 255, 0.3);
   line-height: 1;
-  margin-bottom: 0.5rem;
+  margin: 4rem 0 0.5rem 0;
 }
 
 .subtitle-roboto {
@@ -870,7 +877,7 @@ img {
 
 .about-section {
   position: relative;
-  padding: 7rem 0;
+  padding: 4rem 0 0 0;
   background: var(--bg-dark-deep);
   z-index: 2;
 }
@@ -944,6 +951,14 @@ img {
   overflow: hidden;
 }
 
+/* Dedicated Projects Page */
+.projects-page-section {
+  position: relative;
+  min-height: 100vh;
+  padding: 8.5rem 0 6rem;
+  overflow: hidden;
+}
+
 .projects-bg-layer {
   position: absolute;
   top: 0;
@@ -1011,11 +1026,49 @@ img {
   margin-bottom: 3.5rem;
 }
 
+/* Home: horizontal carousel. The full projects page keeps the grid above. */
+.projects-grid.home-projects-carousel {
+  display: flex;
+  gap: 2rem;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.home-projects-carousel .project-card {
+  flex: 0 0 calc((100% - 4rem) / 3);
+  min-width: 0;
+  transform: translateX(calc(var(--home-carousel-translate, 0px) + var(--home-carousel-drag, 0px)));
+  transition: transform 0.5s ease;
+}
+
+.projects-grid.home-projects-carousel {
+  cursor: grab;
+  touch-action: pan-y;
+}
+
+.projects-grid.home-projects-carousel.is-dragging {
+  cursor: grabbing;
+}
+
+.home-projects-carousel.is-dragging .project-card {
+  transition: none;
+}
+
+.projects-load-more {
+  min-height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #c9c7dc;
+  font-size: 0.9rem;
+}
+
 .project-card {
   border-radius: 18px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .project-img-wrapper {
@@ -1053,6 +1106,15 @@ img {
 }
 
 .project-card:hover .project-img-overlay {
+  opacity: 1;
+}
+
+.project-card:focus-visible {
+  outline: 2px solid var(--neon-cyan);
+  outline-offset: 4px;
+}
+
+.project-card:focus-visible .project-img-overlay {
   opacity: 1;
 }
 
@@ -1126,16 +1188,58 @@ img {
   color: #d1cfe2;
 }
 
-/* Carousel Pagination Dots (From Figma) */
+/* Carousel Navigation */
+.carousel-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.home-projects-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.home-projects-cta .btn {
+  border-radius: 999px;
+}
+
 .carousel-dots-wrapper {
   display: flex;
   justify-content: center;
   gap: 0.75rem;
 }
 
+.carousel-arrow {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 1px solid rgba(0, 255, 242, 0.55);
+  border-radius: 50%;
+  background: rgba(8, 5, 27, 0.75);
+  color: var(--neon-cyan);
+  cursor: pointer;
+  transition: transform var(--transition-fast), background var(--transition-fast), opacity var(--transition-fast);
+}
+
+.carousel-arrow:hover:not(:disabled) {
+  background: var(--neon-cyan);
+  color: #070314;
+  transform: scale(1.08);
+}
+
+.carousel-arrow:disabled {
+  cursor: not-allowed;
+  opacity: 0.35;
+}
+
 .carousel-dots-wrapper .dot {
   width: 14px;
   height: 14px;
+  padding: 0;
+  border: 0;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.2);
   cursor: pointer;
@@ -1146,6 +1250,18 @@ img {
   background: var(--neon-cyan);
   box-shadow: 0 0 10px var(--neon-cyan);
   transform: scale(1.2);
+}
+
+@media (max-width: 992px) {
+  .home-projects-carousel .project-card {
+    flex-basis: calc((100% - 2rem) / 2);
+  }
+}
+
+@media (max-width: 640px) {
+  .home-projects-carousel .project-card {
+    flex-basis: 100%;
+  }
 }
 
 /* ==========================================================================
@@ -1171,7 +1287,7 @@ img {
 
 .contact-main-heading {
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-size: clamp(2rem, 4vw, 2.5rem);
   color: #ffffff;
   margin-bottom: 1.25rem;
   line-height: 1.2;
@@ -1527,17 +1643,38 @@ img {
     grid-template-columns: 1fr;
   }
 
+  .services-section .section-title-center {
+    margin-top: 4rem;
+  }
+
+  .projects-section .title-roadrage {
+    margin: 0 0 0.5rem 0;
+  }
+
   .projects-grid {
     grid-template-columns: 1fr;
   }
 
   .skills-dual-columns {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
 
   .skills-card-box {
     padding: 2rem 1.5rem;
+  }
+
+  .skills-white-line {
+    max-width: 100%;
+  }
+
+  .skills-main-title {
+    display: inherit;
+    text-align: center;
+  }
+
+  .skills-list-container {
+    padding-left: 0;
   }
 
   .hero-actions {
@@ -1562,4 +1699,81 @@ img {
     gap: 1rem;
     text-align: center;
   }
+
+  .floating-whatsapp-btn {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 52px;
+    height: 52px;
+    font-size: 1.75rem;
+  }
+
+  .whatsapp-tooltip {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   FLOATING WHATSAPP BUTTON
+   ========================================================================== */
+
+.floating-whatsapp-btn {
+  position: fixed;
+  bottom: 2.2rem;
+  right: 2.2rem;
+  width: 62px;
+  height: 62px;
+  background: #25d366;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.1rem;
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5), 0 0 15px rgba(0, 255, 242, 0.25);
+  z-index: 998;
+  transition: all var(--transition-smooth);
+  animation: whatsappPulse 3s infinite;
+  text-decoration: none;
+}
+
+.floating-whatsapp-btn:hover {
+  background: #1eb956;
+  transform: scale(1.1) translateY(-4px);
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.8), 0 0 25px rgba(0, 255, 242, 0.5);
+  color: #ffffff;
+}
+
+@keyframes whatsappPulse {
+  0%, 100% {
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5), 0 0 0 0 rgba(37, 211, 102, 0.6);
+  }
+  50% {
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.8), 0 0 0 14px rgba(37, 211, 102, 0);
+  }
+}
+
+.whatsapp-tooltip {
+  position: absolute;
+  right: 76px;
+  top: 50%;
+  transform: translateY(-50%) translateX(10px);
+  background: rgba(7, 3, 20, 0.95);
+  border: 1px solid var(--neon-cyan);
+  color: #ffffff;
+  padding: 0.5rem 1.1rem;
+  border-radius: 9999px;
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6), 0 0 10px var(--neon-cyan-glow);
+}
+
+.floating-whatsapp-btn:hover .whatsapp-tooltip {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
 }
